@@ -31,23 +31,12 @@ $(function() {
     for (i=0; i < len; i++) {
         // store the current value because it may shift later
       $current = $("li").eq(i);
-   //   value = $("li").eq(i).data("pledge");
-      console.log($current);
 
-        /*
-         * Whenever the value in the sorted section is greater than the value
-         * in the unsorted section, shift all items in the sorted section over
-         * by one. This creates space in which to insert the value.
-         */
-     // for (j=i-1; j > -1 && $("li").eq(j).data("pledge") > value; j--) {
       while($current.data("pledge") < $current.prev().data("pledge")) {
-        $current.prev().insertAfter($("li").eq(i));
-     //   $("li").eq(j).insertAfter($("li").eq(i));
+        $current.prev().insertAfter($current);
 
       }
-
     }
-
   }
 
   donorSet = new DonorSet();
