@@ -20,9 +20,8 @@ $(function() {
     });
   }
 
-  function insertionSort() {
+  var insertionSort = function () {
     var len     = $("li").length,     // number of items in the array
-      value,
       $current,                      // the value currently being compared
       i,                          // index into unsorted section
       j;                          // index into sorted section
@@ -31,12 +30,17 @@ $(function() {
     for (i=0; i < len; i++) {
         // store the current value because it may shift later
       $current = $("li").eq(i);
+      var m = $("li").length
+      function doMove() {
 
-      while($current.data("pledge") < $current.prev().data("pledge")) {
-        $current.prev().insertAfter($current);
+        while($current.data("pledge") < $current.prev().data("pledge")) {
+          $current.prev().insertAfter($current);
 
-      }
+        }
+      };
+      setTimeout(doMove, 1000);
     }
+
   }
 
   donorSet = new DonorSet();
