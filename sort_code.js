@@ -30,17 +30,15 @@ $(function() {
     for (i=0; i < len; i++) {
         // store the current value because it may shift later
       $current = $("li").eq(i);
-      var m = $("li").length
-      function doMove() {
-
+      function doMove($current) {
         while($current.data("pledge") < $current.prev().data("pledge")) {
-          $current.prev().insertAfter($current);
 
-        }
+            $current.prev().insertAfter($current);
+        } ;
       };
-      setTimeout(doMove, 1000);
-    }
 
+      setTimeout(doMove, i * 1000, $current);
+    }
   }
 
   donorSet = new DonorSet();
