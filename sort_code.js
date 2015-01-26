@@ -37,7 +37,7 @@ $(function() {
         } ;
       };
 
-      setTimeout(doMove, i * 1000, $current);
+      setTimeout(doMove, i * 800, $current);
     }
   }
 
