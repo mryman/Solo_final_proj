@@ -26,6 +26,11 @@ h1 {
 	font-size: 50px;
 }
 
+.goal {
+	font-style: bold;
+	font-size: 18px;
+}
+
 .intro {
 	font-style: italic;
 	font-size: 20px;
