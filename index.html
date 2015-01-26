@@ -9,9 +9,10 @@
       <title>Pledge Tracker</title>
   </head>
   <body class="background">
-    <h1>Tracking Pledges</h1>
+    <h1>Tracking Pledges with Insertion Sort</h1>
     <main>
-      <p class="intro"> The set of data below represents a collection of the most recent donors who have made financial pledges to our cause. The dollar amount for each donor is from the predefined pledge levels for our current drive.  To view the list organized in ascending order by dollar amount for clarity, click the <strong>Sort Donors!</strong> button below.</p>
+      <p class="goal"> There are many different sorting algorithms that make sets of data more readable for analyzing trends and patterns.  One such algorithm that works well for relatively small data sets is the Insertion Sort.  We can demonstrate this with the example scenario below. Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. One advantage of this algorithm is its stability.  As noted by the sequence of donors who made equivalent pledges, the algorithm does not change the relative order of elements with equal keys.</p>
+      <p class="intro"> The list below represents a collection of the most recent donors who have made financial pledges to a cause. The dollar amount represents what each donor selected from predefined pledge levels for the current drive.  To view the list organized in ascending order by dollar amount for clarity, click the <strong>Sort Donors!</strong> button below.</p>
       <ul id="donors">
       </ul>
       <button class="sortBtn">Sort Donors!</button>
